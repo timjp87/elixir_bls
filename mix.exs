@@ -4,7 +4,7 @@ defmodule Bls.MixProject do
   def project do
     [
       app: :bls,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.8",
       description: description(),
       package: package(),
@@ -24,7 +24,8 @@ defmodule Bls.MixProject do
   defp package() do
     [
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/timjp87/elixir-bls"}
+      links: %{"GitHub" => "https://github.com/timjp87/elixir-bls"},
+      files: ~w(lib priv .formatter.exs mix.exs README* LICENSE* native)
     ]
   end
 
