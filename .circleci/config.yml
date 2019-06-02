@@ -18,6 +18,9 @@ jobs:
       - checkout
 
       # specify any bash command here prefixed with `run: `
+      - run: curl https://sh.rustup.rs -sSf | sh -s -- -y
+      - run: echo 'export PATH=$PATH:/home/circleci/.cargo/bin' >> $BASH_ENV
+      - run: sudo apt-get update && sudo apt-get install -y cmake build-essential
       - run: mix local.hex --force
       - run: mix local.rebar --force
       - run: mix deps.get
