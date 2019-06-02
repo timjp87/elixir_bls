@@ -24,3 +24,6 @@ bls-*.tar
 
 # Ignore logs
 /log
+
+# Ignore language server files
+/.elixir_ls
