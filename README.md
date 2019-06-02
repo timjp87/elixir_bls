@@ -1,5 +1,7 @@
 # Bls
 
+[![CircleCI](https://circleci.com/gh/timjp87/elixir-bls.svg?style=svg)](https://circleci.com/gh/timjp87/elixir-bls)
+
 Elixir wrapper around the Sigma Prime BLS 12-381 eliptic curve and signature scheme Rust implementation.
 
 ## Installation
