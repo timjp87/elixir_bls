@@ -27,3 +27,6 @@ bls-*.tar
 
 # Ignore language server files
 /.elixir_ls
+
+# Compilation output
+/priv/native/libbls.so
