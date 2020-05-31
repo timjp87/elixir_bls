@@ -9,8 +9,7 @@ defmodule Bls.MixProject do
       description: description(),
       package: package(),
       start_permanent: Mix.env() == :prod,
-      compilers: [:rustler] ++ Mix.compilers(),
-      rustler_crates: rustler_crates(),
+      compilers: Mix.compilers(),
       source_url: "https://github.com/timjp87/elixir-bls",
       test_coverage: [tool: ExCoveralls],
       deps: deps()
@@ -18,13 +17,13 @@ defmodule Bls.MixProject do
   end
 
   defp description() do
-    "NIF wrapper around the Rust BLS 12-381 Elliptic Curve construction and signature aggregation scheme."
+    "Wrapper ETH2 Herumui BLS 12-381 Elliptic Curve construction and signature aggregation scheme."
   end
 
   defp package() do
     [
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/timjp87/elixir-bls"},
+      links: %{"GitHub" => "https://github.com/timjp87/elixir_bls"},
       files: ~w(lib priv .formatter.exs mix.exs README* LICENSE* native)
     ]
   end
@@ -40,14 +39,7 @@ defmodule Bls.MixProject do
   defp deps do
     [
       {:wasmex, "~> 0.2.0"},
-      {:rustler, "~> 0.21.0"},
       {:ex_doc, ">= 0.0.0", only: :dev}
-    ]
-  end
-
-  defp rustler_crates do
-    [
-      bls: [path: "native/bls", mode: if(Mix.env() == :prod, do: :release, else: :debug)]
     ]
   end
 end
