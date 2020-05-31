@@ -11,8 +11,10 @@ defmodule Bls do
 
   def init(args) do
     Logger.info("Initializing BLS.")
-    {:ok, bytes } = File.read("bls_c.wasm")
-    {:ok, instance } = Wasmex.start_link(bytes)
-    {:ok, instance }
+    {:ok, bytes} = File.read("bls_c.wasm")
+    {:ok, pid} = Wasmex.start_link(bytes)
+    Wasmex.call_function(pid, "blsInit", [5, 246])
+    Wasmex.call_function(pid, "blsSetETHmode", [3])
+    {:ok, pid}
   end
 end
