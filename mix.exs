@@ -10,7 +10,7 @@ defmodule Bls.MixProject do
       package: package(),
       start_permanent: Mix.env() == :prod,
       compilers: Mix.compilers(),
-      source_url: "https://github.com/timjp87/elixir-bls",
+      source_url: "https://github.com/timjp87/elixir_bls",
       test_coverage: [tool: ExCoveralls],
       deps: deps()
     ]
