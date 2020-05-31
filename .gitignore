@@ -28,5 +28,5 @@ bls-*.tar
 # Ignore language server files
 /.elixir_ls
 
-# Compilation output
-/priv/native/libbls.so
+# MacOS file explorer helper files. 
+.DS_Store
