@@ -3,7 +3,7 @@ defmodule Bls.MixProject do
 
   def project do
     [
-      app: :bls,
+      app: :elixir_bls,
       version: "0.1.1",
       elixir: "~> 1.8",
       description: description(),
